@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+@font-face {
+	src: url('../fonts/Crashnumberinggothic-MAjp.ttf');
+}
+
+:root {
+	--orange: hsl(25, 97%, 53%);
+	--white: hsl(0, 0%, 100%);
+	--light-grey: hsl(217, 12%, 63%);
+	--medium-grey: hsl(208, 20%, 19%);
+	--dark-blue: hsl(213, 19%, 18%);
+	--very-dark-blue: hsl(216, 12%, 8%);
+
+	--font-text: 'Overpass', sans-serif;
+	--font-number: 'Crash Numbering Font';
+}
+
+.body {
+	font-family: var(--font-text);
+	background-color: var(--very-dark-blue);
+	color: var(--white);
+	text-align: center;
+	margin-bottom: .5rem;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.wrapper {
+	background-color: var(--dark-blue);
+	width: min(90vw, 350px);
+	height: 390px;
+	border-radius: 1rem;
+	padding: 2rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
+}
+
+.icon_star {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.icon_star::before {
+	content: url("../images/icon-star.svg");
+	background-color: var(--medium-grey);
+	padding: .7rem;
+	border-radius: 50%;
+}
+
+.wrapper__checkbox {
+	display: flex;
+	justify-content: space-between;
+}
+
+input[type="radio"] {
+	visibility: hidden;
+}
+
+.checkboxs {
+	padding: .9rem 1rem;
+	background-color: var(--medium-grey);
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+	font-family: var(--font-number);
+}
+
+.checkboxs>input {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+.btn__submit {
+	background-color: var(--orange);
+	padding: 1rem 0;
+	border-radius: 2rem;
+	border: none;
+	color: inherit;
+	font-weight: 700;
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+
+.wrapper.thank_you {
+	text-align: center;
+}
+
+.thank_you__img {
+	width: 150px;
+	margin: 0 auto;
+}
+
+.thank_you__choice {
+	background-color: var(--medium-grey);
+	border-radius: 2rem;
+	color: var(--orange);
+	align-self: center;
+	padding: .7rem;
+}
+
+.hide {
+	display: none;
+}

@@ -52,3 +52,16 @@ a {
 button, input {
    box-sizing: border-box;
 }
+
+
+/* User */
+
+h1, h2 {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+p {
+	color: var(--light-grey);
+	line-height: 1.5;
+}
