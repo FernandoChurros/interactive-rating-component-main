@@ -65,10 +65,6 @@ input[type="radio"] {
 /*	visibility: hidden;*/
 }
 
-.checkboxs:checked {
-	background-color: var(--orange);
-}
-
 .checkboxs {
 	padding: .9rem 1rem;
 	background-color: var(--dark-grey);
@@ -123,4 +119,8 @@ input[type="radio"] {
 
 .hide {
 	display: none;
+}
+
+.bg-active {
+	background-color: var(--orange);
 }
