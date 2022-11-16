@@ -5,9 +5,11 @@ const btn = document.querySelector('[data-button]');
 const wrapper = document.querySelectorAll('[data-wrapper]')
 
 let radioVal;
+let isSelect = false;
 
 inputs.forEach( input => {
 	input.addEventListener( 'click', (e) => {
+		isSelect = true;
 		radioVal = input.value;
 
 		input.labels[0].classList.add('bg-active');
@@ -21,8 +23,11 @@ inputs.forEach( input => {
 
 
 btn.addEventListener('click', () => {
-	wrapper[0].classList.add('hide');
 
-	choice.textContent = radioVal;
-	wrapper[1].classList.remove('hide');
+	if (isSelect) {
+		wrapper[0].classList.add('hide');
+
+		choice.textContent = radioVal;
+		wrapper[1].classList.remove('hide');
+	}
 })
